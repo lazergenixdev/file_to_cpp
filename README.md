@@ -3,13 +3,15 @@ Generates C++ header from a file, useful for embedding data into programs.
 
 # How to use Generated Output
 ```cpp
-// use with namespace  $ ./file_to_cpp shader.vert.inl shader.vert
+// use with namespace
 namespace vertex_shader {
+// $ ./file_to_cpp shader.vert.inl shader.vert
 #include "shader.vert.inl"
 }
 
-// or use with struct  $ ./file_to_cpp shader.frag.inl shader.frag
+// or use with struct
 struct fragment_shader {
+// $ ./file_to_cpp shader.frag.inl shader.frag
 #include "shader.frag.inl"
 };
 
