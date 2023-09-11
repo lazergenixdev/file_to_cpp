@@ -27,7 +27,7 @@ int ftcpp_generate_from_data(
 "static constexpr unsigned int data[] = {\n"
 
 #define ftcpp_printf(F, ...) if (fprintf(output_file, F, __VA_ARGS__) == -1) return 1
-#define ftcpp_puts(S) if (fputs(S, output_file)) return 1
+#define ftcpp_puts(S) if (fputs(S, output_file) < 0) return 1
 #define ftcpp_putc(C) if (fputc(C, output_file) != C) return 1
 #define ftcpp_range(C) (int i = 0; i < (C); ++i)
 
